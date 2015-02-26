@@ -1,0 +1,26 @@
+<div class="container">
+<p>
+  <strong><h3>Title:</h3></strong>
+  <%= @property.name %>
+</p>
+<p>
+  <strong><h3>Prize:</h3></strong>
+  <%= @property.prize%>
+</p>
+  <p>
+  <strong><h3>Addresss:</h3></strong>
+  <%= @property.prize%>
+</p>
+<p>
+  <strong><h3>b_code</h3></strong>
+  <%= @property.b_code%>
+</p>
+ 
+<p>
+  <strong><h3>Zip</h3></strong>
+  <%= @property.zip%>
+</p>
+<%= link_to 'Add new property', new_property_path %></br>
+<%= link_to 'back', properties_path %>
+
+</div>
