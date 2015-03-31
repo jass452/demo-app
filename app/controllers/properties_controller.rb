@@ -1,6 +1,10 @@
 class PropertiesController < ApplicationController
+  respond_to :html, :xml, :json
   def index
   	 @properties = Property.all
+ 
+     respond_with(@properties)
+     
   end
   def new
    @property = Property.new
@@ -13,7 +17,7 @@ class PropertiesController < ApplicationController
   	
   # @property = Property.new(params.require(:property).permit(:name, :address, :b_code, :zip, :prize))
   @property = Property.new(property_params)
- 
+  
   if @property.save
    redirect_to @property
    else
@@ -40,6 +44,6 @@ class PropertiesController < ApplicationController
 end
   private
   def property_params
-    params.require(:property).permit(:name, :address, :b_code, :zip, :prize)
+    params.require(:property).permit(:name, :bath, :bed, :pool, :prize, :type, :address,:image )
   end
 end

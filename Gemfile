@@ -44,5 +44,12 @@ group :development, :test do
   gem 'devise'
   gem 'bootstrap-sass', '~>3.3.3'
   gem 'pry'
+  #gem 'activeadmin', github: 'activeadmin'
+  gem 'less-rails'
+  gem 'carrierwave'
+  gem 'rmagick', '2.13.4'
+  gem 'geocoder'
+
+
 end
 

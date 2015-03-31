@@ -12,32 +12,47 @@
       </ul>
     </div>
   <% end %>
-
-<%= form_for :property, url:properties_path do |f| %>
-  <h1>Add property</h1>
+<div class="proper-singup">
+<%= form_for @property, :html => {:multipart => true}  do |f| %> 
+<h1>Add property</h1>
   <p>
     <%= f.label :Name %><br>
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :Address %><br>
+    <%= f.label :addres %><br>
     <%= f.text_field :address %>
   </p>
+  <p>
+    <%= f.label :bath %><br>
+    <%= f.text_field :bath %>
+  </p>
    <p>
-    <%= f.label :B_code %><br>
-    <%= f.text_field :b_code %>
+    <%= f.label :bed %><br>
+    <%= f.text_field :bed %>
   </p>
   <p>
-    <%= f.label :Zip %><br>
-    <%= f.text_field :zip %>
+    <%= f.label :pool %><br>
+    <%= f.text_field :pool %>
   </p>
+   <p>
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </p>
+  
   <p>
     <%= f.label :Prize %><br>
     <%= f.text_field :prize %>
   </p>
- <p>
+  <p>
+    <%= f.file_field :image %>
+  </p>
+  
+  
+  <p>
     <input class="btn btn-primary" type="submit" value="Save property">
   </p>
 <% end %>
 <%= link_to 'back', root_path %>
+</div>
 </div>
