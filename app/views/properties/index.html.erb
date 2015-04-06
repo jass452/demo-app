@@ -3,20 +3,27 @@
             <!-- start Content -->
             <div id="content">
                 <div class="panel googleMaparea">
-                    <div id="googleMap" class="googleMap">         
+                    <div id="googleMap" class="googleMap"> 
+                    <script type="text/javascript">
+                    $( document ).ready(function() {
+                            init_gmap3()
+                        });
+                    </script>        
                     </div>
                    
                 </div>
                 <!--    News Carousel-->
                 <div class="news-carousel-wrapper">
                     <dl id="news-carousel" class="news-carousel-style">
-                        <dt><a href="#">News Link Here</a></dt>
-                        <dd>Vivamus diam diam, fermentum sed dapibus eget, egestas sed eros. Lorem fermentum ipsum dolor sit amet, ipsum dolor sit amet.</dd>
-                        <dt><a href="#">Promo Link Here</a></dt>
-                        <dd>Vivamus diam diam, fermentum sed dapibus eget, egestas sed eros. Lorem fermentum ipsum dolor sit amet, ipsum dolor sit amet.</dd>
-                        <dt><a href="#">Another Link Here</a></dt>
-                        <dd>Vivamus diam diam, fermentum sed dapibus eget, egestas sed eros. Lorem fermentum ipsum dolor sit amet, ipsum dolor sit amet.</dd>
+                        <dt></dt>
+                        <dd><% @properties.each do |p| %> </dd>
+                        <dt><a href="#">Owner Name</a></dt>
+                        <dd><%= p.name %></dd>
+                        <dt><a href="#">Address</a></dt>
+                        <dd><%= p.address %></dd>
+                         <% end %>
                     </dl>
+
                 </div>
                 <!--    End News Carousel-->
 
@@ -40,7 +47,7 @@
                                             
                                               <div class="item">
                                                   <a href="#" class="with-hover">
-                                                    <% if property.type== "Rent" %>
+                                                    <% if property.type == "Rent" %>
                                                         <div class="for_rent_banner"></div>
                                                     <% else %>
                                                         <div class="for_sale_banner"></div>
@@ -61,7 +68,7 @@
                                                           </p>
                                                           <div class="clearfix">
                                                             <div class="btn-proper btn btn-small pull-left">
-                                                            <a href=<%=" /properties/:id/"%>>See Detail</a>
+                                                            <a href=<%=""%>>See Detail</a>
 
                                                             </div>
                                                             <a href="#" class="btn-proper btn btn-small pull-right">Compare</a>
@@ -89,9 +96,10 @@
                                             <img alt="images" class="media-object" src="/assets/news/thum/n1.jpg">
                                         </a>
                                         <div class="media-body">
-                                            <h4 class="media-heading">Investor Club</h4>
-                                            <p>Vivamus diam diam, fermentum sed dapibus eget, egestas sed eros. Lorem fermentum ipsum dolor sit amet, ipsum dolor sit amet, consectetur fermentum adipiscing elit. 
-                                                Vivamus diam diam, fermentum sed dapibus eget, egestas sed eros. Lorem fermentum ipsum dolor sit amet, ipsum dolor sit amet, consectetur fermentum adipiscing elit.</p>
+                                            <h4 class="media-heading"></h4>
+                                            <p>Buyers guide to green homes in India
+
+                                                "Sustainable real estate is all about using resources sustainably and addres..."/p>
                                             <a href="#" class="btn-proper btn btn-small ">Read More</a>
                                         </div>
                                     </div>
@@ -253,4 +261,85 @@
         <!-- Defaut Js Bootsrap
          ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        
+    <script type="text/javascript">
+
+
+   function init_gmap3(){
+    $(function(){
+        var icon_villa = "assets/map/hostel_0star.png"
+        var icon_hotel = "assets/map/villa.png"
+        var img_p = "assets/properties/p1.jpg"
+        $("#googleMap").gmap3({
+            map:{
+                // CENTRAL MAP DEFAULT
+                address:"chandigarh, Punjab",
+                options:{
+                    zoom:12,
+                    scaleControl: false,
+                    scrollwheel: false,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    mapTypeControl: true,
+                    mapTypeControlOptions: {
+                        style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+                    }
+                }
+            },
+            marker:{
+                // DATA LOCATION
+                values:[
+              <% @properties.each do |p| %>
+
+                {
+                    latLng:[ <%= p.latitude %>,<%= p.longitude %>], 
+                    data:{
+                        img_preview:"<%= p.image %>", 
+                        properties_name:"<%= p.name %>", 
+                        properties_Address:"<%= p.address %>",
+                        
+                        properties_link:"#", 
+                       
+                    }, 
+                    options:{
+                        icon: icon_hotel
+                    }
+                },
+                <% end %>
+              
+                 ],
+                events:{
+                    mouseover: function(marker, event, context){
+                        $(this).gmap3(
+                        {
+                            clear:"overlay"
+                        },
+
+                        {
+                            overlay:{
+                                latLng: marker.getPosition(),
+                                options:{
+                                    content:  "<div class='info-location'>" +
+                                    "<div class='text'><h4>" 
+                                    + context.data.properties_name +
+                                    "</h4>"+
+                                    "<img src='"+ context.data.img_preview +"' width=90><br/>"+
+                                    context.data.properties_Address + 
+                                    "<br/><a href='"+context.data.properties_link +"'class='btn btn-proper btn-small'>See Detail</a></div>" +
+                                    "</div>" +
+                                    "<div class='arrow-location'></div>",
+                                    offset: {
+                                        x:-46,
+                                        y:-73
+                                    }
+                                }
+                            }
+                        });
+                    }
+                    
+                }
+            }
+            
+        });
+    });
+}
+
+    </script>

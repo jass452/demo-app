@@ -8,6 +8,8 @@
 <p>
   <%= image_tag @property.image_url(:thumb) if @property.image? %>
 </p>
+
+
 <p>
   <strong><h3>Title:</h3></strong>
   <%= @property.name %>
@@ -29,6 +31,15 @@
   <strong><h3>type</h3></strong>
   <%= @property.type%>
 </p>
+<p>
+  <strong><h3>Longitude</h3></strong>
+  <%= @property.longitude%>
+</p>
+<p>
+  <strong><h3>Latitude</h3></strong>
+  <%= @property.latitude%>
+</p>
+
 
 
 

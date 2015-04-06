@@ -2,6 +2,7 @@ class PropertiesController < ApplicationController
   respond_to :html, :xml, :json
   def index
   	 @properties = Property.all
+
  
      respond_with(@properties)
      
@@ -41,9 +42,14 @@ class PropertiesController < ApplicationController
   @property.destroy
  
   redirect_to properties_path
-end
+  end
+  def properties_detail
+
+    @property = Property.find(params[:id])
+    
+  end
   private
   def property_params
-    params.require(:property).permit(:name, :bath, :bed, :pool, :prize, :type, :address,:image )
+    params.require(:property).permit(:name, :bath, :bed, :pool, :prize, :type, :address,:image, :image1, :image2, :image3, :latitude, :longitude )
   end
 end

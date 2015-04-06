@@ -3,6 +3,8 @@ def index
     
    
   end
+  def properties_detail
+  end
 end
 
  

@@ -8,13 +8,14 @@ Rails.application.routes.draw do
   get 'homes/index'
 
   devise_for :users
+  match '/properties_detail/:id',   to: 'properties#properties_detail',   via: 'get'
  match '/index',   to: 'homes#index',   via: 'get'
   match '/contact',   to: 'homes#contact',   via: 'get'
   match '/about_us',   to: 'homes#about_us',   via: 'get'
   match '/login',   to: 'homes#login',   via: 'get'
   match '/agents',   to: 'homes#agents',   via: 'get'
   match '/career',   to: 'homes#career',   via: 'get'
-
+ 
   match '/custum-bg',   to: 'homes#custum-bg',   via: 'get'
   
  
@@ -26,7 +27,7 @@ Rails.application.routes.draw do
   match '/news',   to: 'homes#news',   via: 'get'
   
  
-  match '/properties_detail/:id',   to: 'homes#properties_detail',   via: 'get'
+  
   match '/properties_filter',   to: 'homes#properties_filter',   via: 'get'
   
   match '/sing_up',   to: 'homes#sing_up',   via: 'get'
