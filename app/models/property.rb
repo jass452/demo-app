@@ -1,4 +1,5 @@
 class Property < ActiveRecord::Base
+	has_many:contact
 	self.inheritance_column = nil
 	 mount_uploader :image, ImageUploader
 	 mount_uploader :image1, Image1Uploader
@@ -8,6 +9,11 @@ class Property < ActiveRecord::Base
 	 after_validation :geocode
 	 validates :name, presence: true, length: { maximum: 20 }
   	validates_presence_of :prize, :bed, :bath, :type
-  
+
+
+
+  	
+  	
+
 	end
 

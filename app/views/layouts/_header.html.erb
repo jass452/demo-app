@@ -29,7 +29,7 @@
   <!-- start breadcrumb -->
   <div id="breadcrumb-wrapper">
     <div class="container">
-      <div class="pull-left">Sunday, May 18 2013</div>
+      <div class="pull-left"><%= Time.now.strftime("%m/%d/%Y") %></div>
       <div class="pull-right">
          
 
@@ -55,7 +55,7 @@
       <div class="panel">
         <div class="row-fluid">
           <div class="span9 right-line">
-            <a class="brand" href="/index" ><h1 class="font-caly"><img src="/assets/logo.png" width="40" alt="logo"> SellProperty <small class="visible-desktop visible-tablet"></small></h1></a>
+            <a class="brand" href="/" ><h1 class="font-caly"><img src="/assets/logo3.png" width="40" alt="logo"> SellProperty <small class="visible-desktop visible-tablet"></small></h1></a>
           </div>
           <div class="span3 ">
             <div class="clearfix">
@@ -73,7 +73,7 @@
     </div>
   </div><!-- End header-wrapper -->
   <!-- start Navigation -->
-  <div id="navigation">
+   <div id="navigation">
     <div class="container">
       <div class="navbar navbar-inverse">
         <div class="navbar-inner">
@@ -87,46 +87,32 @@
             <!--.nav-collapse -->
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/home_full_slider">Home Full Slider</a></li>
-                    <li><a href="/home_carousel">Home Slider Carousel</a></li>
-                   
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Properties <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                 
-                    <li><a href="/properties_map">Properties & Map</a></li>
-                    <li><a href="/properties_detail">Properties Detail</a></li>
-                  </ul>
-               
+                 <li><a href="/">Home</a></li>
+                  <li><a href="#">Properties detail</a></li>
+                <!-- <li class="dropdown">
+                  <a href="/" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                  
+                </li> -->
+                <!-- <li class="dropdown">
+                  <a href="/properties_detail/:id" class="dropdown-toggle" data-toggle="dropdown">Properties <b class="caret"></b></a> -->
+                  
+               <!--  <li><a href="agents">Agents</a></li> -->
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Proper Pages<b class="caret"></b></a>
                   <ul class="dropdown-menu">
                     <li><a href="/about_us">About Us</a></li>
                     <li><a href="/galeries">Galeries</a></li>
-                    <li><a href="/career">Career</a></li>
-                    
+                 
                   </ul>
                 </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
+             
                   
-                    <li><a href="/pricing">Pricing</a></li>
-                   
-                   
-                    <li><a href="/grid_stystem">Grid System</a></li>
-                  </ul>
                 </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">News <b class="caret"></b></a>
                   <ul class="dropdown-menu">
                     <li><a href="/news">News List</a></li>
-                    
+                  
                   </ul>
                 </li>
                 <li><a href="/contact">Contact</a></li>
@@ -137,6 +123,5 @@
           </div>
         </div>
       </div>
-    </div>
-  </div><!-- end Navigation -->
+    </div><!-- end Navigation -->
 </div>

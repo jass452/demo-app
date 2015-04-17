@@ -40,7 +40,11 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  
+
+
+end
+gem 'spring'
   gem 'devise'
   gem 'bootstrap-sass', '~>3.3.3'
   gem 'pry'
@@ -49,7 +53,4 @@ group :development, :test do
   gem 'carrierwave'
   gem 'rmagick', '2.13.4'
   gem 'geocoder'
-
-
-end
-
+  gem 'ransack'

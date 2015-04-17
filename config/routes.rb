@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   devise_for :admin_users#, ActiveAdmin::Devise.config
   root to: "properties#index"
   #ActiveAdmin.routes(self)
@@ -8,33 +10,31 @@ Rails.application.routes.draw do
   get 'homes/index'
 
   devise_for :users
+ match '/properties_detail/:id/email',   to: 'properties#usermailer',   via: 'post'
+ 
   match '/properties_detail/:id',   to: 'properties#properties_detail',   via: 'get'
- match '/index',   to: 'homes#index',   via: 'get'
-  match '/contact',   to: 'homes#contact',   via: 'get'
-  match '/about_us',   to: 'homes#about_us',   via: 'get'
-  match '/login',   to: 'homes#login',   via: 'get'
-  match '/agents',   to: 'homes#agents',   via: 'get'
-  match '/career',   to: 'homes#career',   via: 'get'
  
-  match '/custum-bg',   to: 'homes#custum-bg',   via: 'get'
-  
- 
-  match '/galeries',   to: 'homes#galeries',   via: 'get'
+  match '/contact',   to: 'properties#contact',   via: 'get'
+  match '/about_us',   to: 'properties#about_us',   via: 'get'
  
   
-  match '/home_full_slider',   to: 'homes#home_full_slider', via: 'get'
-  match '/home_simple',   to: 'homes#home_simple', via: 'get'
-  match '/news',   to: 'homes#news',   via: 'get'
+  
+ 
+  match '/galeries',   to: 'properties#galeries',   via: 'get'
+ 
+  
+  match '/home_full_slider',   to: 'properties#home_full_slider', via: 'get'
+  
+  match '/news',   to: 'properties#news',   via: 'get'
   
  
   
-  match '/properties_filter',   to: 'homes#properties_filter',   via: 'get'
+ 
+
   
-  match '/sing_up',   to: 'homes#sing_up',   via: 'get'
-  
-   match '/upload_step1',   to: 'homes#upload_step1',   via: 'get'
-  match '/upload_step2',   to: 'homes#upload_step2',   via: 'get'
-  match '/upload_step3',   to: 'homes#upload_step3',   via: 'get'
+   match '/upload_step1',   to: 'properties#upload_step1',   via: 'get'
+  match '/upload_step2',   to: 'properties#upload_step2',   via: 'get'
+  match '/upload_step3',   to: 'properties#upload_step3',   via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

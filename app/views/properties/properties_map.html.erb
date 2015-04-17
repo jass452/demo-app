@@ -1,0 +1,262 @@
+
+
+            <!--Start Content-->
+            <div id="content">
+                <!--Start Main Title-->
+                <div id="main-title-content">
+                    <img src="/assets/properties/slider/fslider/p1.jpg" id="bg" alt="main-title"/>
+                    <div class="container">
+                        <div class="panel">
+                            <h1>Properties</h1>    
+                            <p>Sub Title Here</p>    
+                        </div>
+                    </div>
+                </div> <!--End Main Title-->
+                <!--    News Carousel-->
+                <div class="news-carousel-wrapper">
+                    <dl id="news-carousel" class="news-carousel-style">
+                       <dt>Properties list</dt>
+                        <dd><% @properties.each do |p| %> </dd>
+                        <dt><a href="#">Owner Name</a></dt>
+                        <dd><%= p.name %></dd>
+                        <dt><a href="#">Address</a></dt>
+                        <dd><%= p.address %></dd>
+                         <% end %>
+                    </dl>
+                </div>
+                <!--    End News Carousel-->
+
+                <div class="container">
+                    <div class="row-fluid">
+                        <div class="span9">
+                            <div class="panel right-line">
+                                <div class="row-fluid">
+                                    <div class="span6">
+                                        <h2 class="main-heading bottom-line"><span class="main-circle-icon"><i class="icon-building"></i></span> List Properties</h2>   
+                                    </div>
+                                    <div class="span6 ">
+                                        <div class="main-heading bottom-line line-before filterarea">
+                                            <form class="filterform">
+                                                <select class="">
+                                                    <option>Asc</option>
+                                                    <option>Desc</option>
+                                                </select>
+                                                <select class="">
+                                                    <option>Price</option>
+                                                    <option>Location</option>
+                                                </select>
+
+                                            </form>
+
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="googleMaparea right-space">
+                                    <div id="googleMap" class=""></div>
+                                </div>
+                                <div class="list-properties right-space">
+                                    <div class="property ">
+                                        <div class="row-fluid">
+                                            <div class="span6">
+                                                <div class="property-images">
+                                                    <a href="#">
+                                                        <div class="mask">
+                                                            <div class="desc-type for-sale">For Sale</div>
+                                                            <div class="price">&euro; 330.090</div>
+                                                        </div>
+                                                        <img src="/assets/properties/p1.jpg" alt="property"/>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="span6">
+                                                <div class="property-details">
+                                                    <h3><a href="#">086 Central Park Lion</a></h3>
+                                                    <p>Vivamus diam diam, fermentum sed dapibus eget, egestas sed eros. Lorem fermentum ipsum dolor sit amet, ipsum dolor sit amet.</p>
+                                                    <p>
+                                                        <span class="label"><i class="icon-circle-arrow-right"></i> Bath : 10</span>
+                                                        <span class="label"><i class="icon-circle-arrow-right"></i> Beds : 8</span>
+                                                        <span class="label"><i class="icon-circle-arrow-right"></i> Pool : 2</span>
+                                                        <span class="label"><i class="icon-circle-arrow-right"></i> Kicthen : 2</span>
+                                                        <span class="label"><i class="icon-circle-arrow-right"></i> Office : 3</span>
+                                                        <span class="label"><i class="icon-circle-arrow-right"></i> Music Room : 2</span>
+                                                    </p>
+                                                    <div class="agent-preview">
+                                                        <div class="agent-image pull-left"  ><a href="#"><img src="/assets/agents/a1.jpg" class="img-polaroid" alt="property"></a></div>
+                                                        <div class="agent-contant pull-right">
+                                                            <ul class="unstyled">
+                                                                <li><i class="icon-phone"></i> (+89)98732.984 </li>
+                                                                <li><i class="icon-envelope"></i> agent@company.com</li>
+                                                                <li><i class="icon-facebook"></i> angel</li>
+                                                                <li><i class="icon-twitter"></i> @angel</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="property ">
+                                        <div class="row-fluid">
+                                            <div class="span6">
+                                                <div class="property-images">
+                                                    <a href="#">
+                                                        <div class="mask">
+                                                            <div class="desc-type for-rent">For Rent</div>
+                                                            <div class="price">&euro; 330.090</div>
+                                                        </div>
+                                                        <img src="/assets/properties/p2.jpg" alt="property"/>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="span6">
+                                                <div class="property-details">
+                                                    <h3><a href="#">086 Central Park Lion</a></h3>
+                                                    <p>Vivamus diam diam, fermentum sed dapibus eget, egestas sed eros. Lorem fermentum ipsum dolor sit amet, ipsum dolor sit amet.</p>
+                                                    <p>
+                                                        <span class="label"><i class="icon-circle-arrow-right"></i> Bath : 10</span>
+                                                        <span class="label"><i class="icon-circle-arrow-right"></i> Beds : 8</span>
+                                                        <span class="label"><i class="icon-circle-arrow-right"></i> Pool : 2</span>
+                                                        <span class="label"><i class="icon-circle-arrow-right"></i> Kicthen : 2</span>
+                                                        <span class="label"><i class="icon-circle-arrow-right"></i> Office : 3</span>
+                                                        <span class="label"><i class="icon-circle-arrow-right"></i> Music Room : 2</span>
+                                                    </p>
+                                                    <div class="agent-preview">
+                                                        <div class="agent-image pull-left"  ><a href="#"><img src="/assets/agents/a1.jpg" class="img-polaroid" alt="property"></a></div>
+                                                        <div class="agent-contant pull-right" style="">
+                                                            <ul class="unstyled">
+                                                                <li><i class="icon-phone"></i> (+89)98732.984 </li>
+                                                                <li><i class="icon-envelope"></i> agent@company.com</li>
+                                                                <li><i class="icon-facebook"></i> angel</li>
+                                                                <li><i class="icon-twitter"></i> @angel</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="property ">
+                                        <div class="row-fluid">
+                                            <div class="span6">
+                                                <div class="property-images">
+                                                    <a href="#">
+                                                        <div class="mask">
+                                                            <div class="desc-type for-rent">For Rent</div>
+                                                            <div class="price">&euro; 330.090</div>
+                                                        </div>
+                                                        <img src="/assets/properties/p3.jpg" alt="property"/>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="span6">
+                                                <div class="property-details">
+                                                    <h3><a href="#">086 Central Park Lion</a></h3>
+                                                    <p>Vivamus diam diam, fermentum sed dapibus eget, egestas sed eros. Lorem fermentum ipsum dolor sit amet, ipsum dolor sit amet.</p>
+                                                    <p>
+                                                        <span class="label"><i class="icon-circle-arrow-right"></i> Bath : 10</span>
+                                                        <span class="label"><i class="icon-circle-arrow-right"></i> Beds : 8</span>
+                                                        <span class="label"><i class="icon-circle-arrow-right"></i> Pool : 2</span>
+                                                        <span class="label"><i class="icon-circle-arrow-right"></i> Kicthen : 2</span>
+                                                        <span class="label"><i class="icon-circle-arrow-right"></i> Office : 3</span>
+                                                        <span class="label"><i class="icon-circle-arrow-right"></i> Music Room : 2</span>
+                                                    </p>
+                                                    <div class="agent-preview">
+                                                        <div class="agent-image pull-left"  ><a href="#"><img src="/assets/agents/a1.jpg" class="img-polaroid" alt="property"></a></div>
+                                                        <div class="agent-contant pull-right" style="">
+                                                            <ul class="unstyled">
+                                                                <li><i class="icon-phone"></i> (+89)98732.984 </li>
+                                                                <li><i class="icon-envelope"></i> agent@company.com</li>
+                                                                <li><i class="icon-facebook"></i> angel</li>
+                                                                <li><i class="icon-twitter"></i> @angel</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  Start Pagination -->
+                                    <div class="pagination pagination-large">
+                                        <ul>
+                                            <li><a href="#"><i class=" icon-angle-left"></i></a></li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#"><i class=" icon-angle-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div><!--  End  List Properties -->
+                            </div>
+
+                        </div>
+                        <div class="span3">
+                            <div class="panel">
+                                <!--Start Form Search Properties-->
+                               <h3 class="main-heading bottom-line line-before"><span class="main-circle-icon"><i class="icon-search"></i></span>  Find Properties</h3>    
+                               <%= search_form_for @search do |f| %>
+                                    <div class="field">   
+                                        <%= f.label :name, "Location contains" %>
+                                        <%= f.text_field :name %>
+                                    </div>
+                                    
+
+
+                                    
+                                  
+                                    <div class="control-group-form">
+                                        <div class="control-group half pull-left">
+                                         
+                                            <div class="controls">
+                                                <%= f.label:prize_gteq %>
+                                                <%= f.text_field :prize_gteq %>
+
+                                               
+                                            </div>
+                                        </div>
+                                        <div class="control-group half text-right pull-right">
+                                            
+                                            <div class="controls">
+                                               <%= f.label:prize_gteq %>
+                                                <%= f.text_field :prize_gteq %>
+
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="control-group-form">
+                                        <div class="control-group half pull-left">
+                                            <label class="checkbox">
+                                                <input type="checkbox" > Rent Property
+                                            </label>
+                                        </div>
+                                        <div class="control-group half text-right pull-right">
+                                            <label class="checkbox">
+                                                <input type="checkbox"> Sell Property
+                                            </label>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <label>Bath</label>
+                                    <%= f.label:bed %>
+                                    <%= f.text_field :bed %>
+
+                                    <%= f.label:bath %>
+                                     <%= f.text_field :bath
+                                      %>
+
+                                    <button type="submit" class="input-block-level btn-proper btn btn-large"> <div class="actions"><%= f.submit "Search" %> </div></button>
+                                 <% end %>
+                                <!--End Form Search Properties-->
+
+                                <!--Start List Our Agent-->
+         
+                                <!--End List Our AGents -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+

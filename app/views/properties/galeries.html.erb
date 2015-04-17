@@ -1,0 +1,52 @@
+
+            <!--Start Content-->
+            <div id="content">
+                <!--Start Main Title-->
+                <div id="main-title-content">
+                    <img src="assets/properties/slider/fslider/p1.jpg" id="bg" alt="main-title"/>
+                    <div class="container">
+                        <div class="panel">
+                            <h1>Galeries</h1>    
+                            <p>Sub Title Here</p>    
+                        </div>
+                    </div>
+                </div> <!--End Main Title-->
+                <!--    News Carousel-->
+                <div class="news-carousel-wrapper">
+                    <dl id="news-carousel" class="news-carousel-style">
+                         <dt>Properties list</dt>
+                        <dd><% @properties.each do |p| %> </dd>
+                        <dt><a href="#">Owner Name</a></dt>
+                        <dd><%= p.name %></dd>
+                        <dt><a href="#">Address</a></dt>
+                        <dd><%= p.address %></dd>
+                         <% end %>
+                    </dl>
+                </div>
+                <!--    End News Carousel-->
+                <div class="container">
+                    <div class="featured-grid right-space">
+                        <div class="box-white">
+                            <div class="grid-galeries grid-style-properties">
+
+                                
+                                   <% @properties.each do |f| %>
+                                <div class="item">    <%= image_tag f.image.url(:thumb) %></div>
+                                    <% end %>
+                              </div>
+                            <hr/>
+                            <div class="pagination pagination-large">
+                                <ul>
+                                    <li><a href="#"><i class=" icon-angle-left"></i></a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#"><i class=" icon-angle-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--End Grid Featured-->
+                    </div>
+
+                </div>
+            </div>            
