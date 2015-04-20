@@ -56,3 +56,4 @@ gem 'spring'
   gem 'rmagick', '2.13.4'
   gem 'geocoder'
   gem 'ransack'
+

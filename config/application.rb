@@ -24,11 +24,11 @@ module Login
     config.active_record.raise_in_transactional_callbacks = true
 
 
-    ActionMailer::Base.smtp_settings = {
-    address: 'smtp.mandrillapp.com',
-    port: 587,
-    user_name: ENV['MANDRILL_USERNAME'],
-    password: ENV['MANDRILL_APIKEY']
-}
+#     ActionMailer::Base.smtp_settings = {
+#     address: 'smtp.mandrillapp.com',
+#     port: 587,
+#     user_name: ENV['MANDRILL_USERNAME'],
+#     password: ENV['MANDRILL_APIKEY']
+# }
   end
 end
