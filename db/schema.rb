@@ -70,7 +70,6 @@ ActiveRecord::Schema.define(version: 20150415082826) do
     t.integer  "pool"
     t.string   "type"
     t.string   "image"
-    t.string   "address"
     t.float    "latitude"
     t.float    "longitude"
     t.string   "image1"
